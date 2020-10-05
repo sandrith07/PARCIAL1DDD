@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 
 namespace PARCIAL1DDD
@@ -17,9 +19,15 @@ namespace PARCIAL1DDD
 
         public override string RegistrarSalida(int cantidad)
         {
+            
             if (cantidad <= 0) return "No se puede vender un producto con cantidad menor o igual a cero";
 
-            Costo = CalcularCostoIngredientes(Ingredientes);
+            /*DisminuirCantidadIngredientesExistentes(Ingredientes);*/
+
+           CostoTotalIngredientes = CalcularCostoIngredientes(Ingredientes);
+           Costo = CostoTotalIngredientes * cantidad;
+           
+
 
             return "Venta exitosa";
 
@@ -28,14 +36,32 @@ namespace PARCIAL1DDD
 
         public decimal CalcularCostoIngredientes(List<ProductoSimple> ingredientes)
         {
-
+            decimal costoTotal=0;
             foreach (ProductoSimple p in ingredientes)
             {
-                CostoTotalIngredientes += p.Costo * p.Cantidad;
+                costoTotal += p.Costo * p.Cantidad;
             }
 
-            return CostoTotalIngredientes;
+            return costoTotal;
+           
         }
+        /*
+         
+        public void DisminuirCantidadIngredientesExistentes(List<ProductoSimple> ingredientes)
+        {
+            int count = ingredientes.Count();
+            foreach (ProductoSimple p in ingredientes)
+            {
+                for ( int i=1; i<=count; i++)
+                {
+                    p.RegistrarSalida(p.Cantidad);
+                }
+            }
+
+            
+            
+        }*/
+
     }
 }
 
