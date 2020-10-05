@@ -1,0 +1,9 @@
+C:\Users\Acer\source\repos\PARCIAL1DDD\PARCIAL1DDD\bin\Debug\netstandard2.0\PARCIAL1DDD.deps.json
+C:\Users\Acer\source\repos\PARCIAL1DDD\PARCIAL1DDD\bin\Debug\netstandard2.0\PARCIAL1DDD.dll
+C:\Users\Acer\source\repos\PARCIAL1DDD\PARCIAL1DDD\bin\Debug\netstandard2.0\PARCIAL1DDD.pdb
+C:\Users\Acer\source\repos\PARCIAL1DDD\PARCIAL1DDD\obj\Debug\netstandard2.0\PARCIAL1DDD.csprojAssemblyReference.cache
+C:\Users\Acer\source\repos\PARCIAL1DDD\PARCIAL1DDD\obj\Debug\netstandard2.0\PARCIAL1DDD.AssemblyInfoInputs.cache
+C:\Users\Acer\source\repos\PARCIAL1DDD\PARCIAL1DDD\obj\Debug\netstandard2.0\PARCIAL1DDD.AssemblyInfo.cs
+C:\Users\Acer\source\repos\PARCIAL1DDD\PARCIAL1DDD\obj\Debug\netstandard2.0\PARCIAL1DDD.csproj.CoreCompileInputs.cache
+C:\Users\Acer\source\repos\PARCIAL1DDD\PARCIAL1DDD\obj\Debug\netstandard2.0\PARCIAL1DDD.dll
+C:\Users\Acer\source\repos\PARCIAL1DDD\PARCIAL1DDD\obj\Debug\netstandard2.0\PARCIAL1DDD.pdb

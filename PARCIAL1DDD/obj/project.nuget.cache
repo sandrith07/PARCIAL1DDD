@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "XoY2lrLC1jtHaFLndeXbWRhAn9Ajcy9q++9hos/oW7ZTVNuiDzWvBwC1oFlGQYgnwYhbZdJ0FAkYY8jeBgUEZw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Acer\\source\\repos\\PARCIAL1DDD\\PARCIAL1DDD\\PARCIAL1DDD.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Acer\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Acer\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
