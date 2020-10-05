@@ -6,7 +6,7 @@ namespace PARCIAL1DDD
 {
     public class ProductoSimple : Producto
     {
-        public int Cantidad = 0;
+     
         public ProductoSimple(string nombre, decimal costo, decimal precio) : base(nombre, costo, precio)
         {
         }
@@ -19,6 +19,15 @@ namespace PARCIAL1DDD
             Cantidad += cantidad;
 
             return "Registro exitoso";
+        }
+
+        public override string RegistrarSalida(int cantidad)
+        {
+            if (cantidad <= 0) return "No se puede vender un producto con cantidad menor o igual a cero";
+
+            Cantidad -= cantidad;
+
+            return "Venta exitosa";
         }
     }
 }
