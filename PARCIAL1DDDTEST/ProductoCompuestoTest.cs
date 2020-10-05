@@ -33,10 +33,10 @@ namespace PARCIAL1DDDTEST
             var productoCompuesto = new ProductoCompuesto(nombre: "Perro Caliente Sencillo",  precio: 7000, ingredientes);
             //Acción
 
-            var registro2 = productoCompuesto.RegistrarSalida(1);
+            var registro2 = productoCompuesto.RegistrarSalida(0);
             //Verificación
-            Assert.AreEqual("Venta exitosa", registro2);
-            Assert.AreEqual(productoCompuesto.Costo, 2000);
+            Assert.AreEqual("No se puede vender un producto con cantidad menor o igual a cero", registro2);
+            
             
 
         }
