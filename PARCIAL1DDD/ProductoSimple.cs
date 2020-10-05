@@ -16,7 +16,7 @@ namespace PARCIAL1DDD
             _inventario = new List<Inventario>();
         }
         public int Cantidad { get; set; }
-        public decimal PrecioVenta { get; set; }
+        
         public string TipoProducto { get; set; }
         public decimal Costo { get; set; }
         public string RegistrarEntrada(int cantidad)

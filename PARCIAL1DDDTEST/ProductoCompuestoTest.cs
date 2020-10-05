@@ -58,11 +58,12 @@ namespace PARCIAL1DDDTEST
              //Preparar
 
              ProductoSimple ingrediente1 = new ProductoSimple("Pan de perro caliente", 1000, 3000, "Ingrediente");
-             var registroEntrada1 = ingrediente1.RegistrarEntrada(3);
+            var registroEntradaI1 = ingrediente1.RegistrarEntrada(5);
+            
              ProductoSimple ingrediente2 = new ProductoSimple("Salchicha de perro caliente", 1000, 4000, "Ingrediente");
-             var registroEntrada2 = ingrediente2.RegistrarEntrada(4);
+            var registroEntradaI2 = ingrediente2.RegistrarEntrada(5);
 
-             List<ProductoSimple> ingredientes = new List<ProductoSimple>();
+            List<ProductoSimple> ingredientes = new List<ProductoSimple>();
 
              ingredientes.Add(ingrediente1);
              ingredientes.Add(ingrediente2);

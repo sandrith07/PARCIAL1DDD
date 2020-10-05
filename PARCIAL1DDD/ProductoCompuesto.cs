@@ -27,7 +27,7 @@ namespace PARCIAL1DDD
              CostoTotalIngredientes = CalcularCostoIngredientes(Ingredientes);
              Costo = CostoTotalIngredientes * cantidad;
 
-            return $"Venta Exitosa, el costo del producto es de  ${Costo:n2} y su precio es de ${Precio:n2}";
+            return $"El precio de la venta es de ${PrecioVenta}, el costo del producto es de  ${Costo:n2} y su precio es de ${Precio:n2}";
 
             
 

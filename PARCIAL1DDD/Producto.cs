@@ -19,7 +19,8 @@ namespace PARCIAL1DDD
        
         public decimal Precio { get; set; }
 
-        
+        public decimal PrecioVenta { get; set; }
+
 
         public virtual string RegistrarSalida(int cantidad)
       {
