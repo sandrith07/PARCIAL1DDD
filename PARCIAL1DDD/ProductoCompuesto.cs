@@ -24,8 +24,8 @@ namespace PARCIAL1DDD
 
             /*DisminuirCantidadIngredientesExistentes(Ingredientes);*/
 
-           CostoTotalIngredientes = CalcularCostoIngredientes(Ingredientes);
-           Costo = CostoTotalIngredientes * cantidad;
+             CostoTotalIngredientes = CalcularCostoIngredientes(Ingredientes);
+             Costo = CostoTotalIngredientes * cantidad;
            
 
 
@@ -45,6 +45,7 @@ namespace PARCIAL1DDD
             return costoTotal;
            
         }
+        
         /*
          
         public void DisminuirCantidadIngredientesExistentes(List<ProductoSimple> ingredientes)
@@ -54,7 +55,7 @@ namespace PARCIAL1DDD
             {
                 for ( int i=1; i<=count; i++)
                 {
-                    p.RegistrarSalida(p.Cantidad);
+                    p.RegistrarSalida(1);
                 }
             }
 
