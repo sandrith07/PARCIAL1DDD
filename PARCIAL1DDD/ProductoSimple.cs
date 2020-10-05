@@ -11,11 +11,12 @@ namespace PARCIAL1DDD
         public ProductoSimple(string nombre, decimal costo, decimal precio, int cantidad) : base(nombre, precio)
         {
             Cantidad = cantidad;
+            Costo = costo;
         }
         public int Cantidad { get; set; }
+        public decimal Costo { get; set; }
         public string RegistrarEntrada(int cantidad)
-        {
-          
+        {         
 
             if (cantidad <= 0) return "Para poder registrar un producto la cantidad debe ser mayor a cero";
 

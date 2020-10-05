@@ -7,7 +7,7 @@ namespace PARCIAL1DDD
     public abstract class  Producto
     {
       
-        public int costo = 0;
+    
         protected Producto(string nombre, decimal precio)
         {
             Nombre = nombre;
@@ -16,7 +16,7 @@ namespace PARCIAL1DDD
         }
 
         public string Nombre { get; }
-        public decimal Costo { get; set; }
+       
         public decimal Precio { get; set; }
 
         

@@ -30,13 +30,15 @@ namespace PARCIAL1DDDTEST
             ingredientes.Add(new ProductoSimple("Salchicha de perro caliente", 1000, 3000,1));
 
 
-            var productoCompuesto = new ProductoCompuesto(nombre: "Perro Caliente Sencillo",  precio: 7000, 1, ingredientes);
+            var productoCompuesto = new ProductoCompuesto(nombre: "Perro Caliente Sencillo",  precio: 7000, ingredientes);
             //Acción
 
             var registro2 = productoCompuesto.RegistrarSalida(1);
             //Verificación
-            Assert.AreEqual("No se puede vender un producto con cantidad menor o igual a cero", registro2);
+            Assert.AreEqual("Venta exitosa", registro2);
+            Assert.AreEqual(productoCompuesto.Costo, 2000);
             
+
         }
     }
 }

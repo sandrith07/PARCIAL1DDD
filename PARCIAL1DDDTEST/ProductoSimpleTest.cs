@@ -54,6 +54,7 @@ namespace PARCIAL1DDDTEST
             //Verificación
             Assert.AreEqual("Registro exitoso", registro2);
             Assert.AreEqual(productoSimple.Cantidad, 11);
+ 
         }
 
 
