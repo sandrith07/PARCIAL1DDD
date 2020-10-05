@@ -125,7 +125,7 @@ namespace PARCIAL1DDDTEST
             var registro1 = productoSimple.RegistrarEntrada(5);
             var salida = productoSimple.RegistrarSalida(2);
             //Verificación
-            Assert.AreEqual("Venta exitosa, hay en existencia 3 productos", salida);
+            Assert.AreEqual("El precio de la venta es de $14000, hay en existencia 3 productos", salida);
 
 
         }

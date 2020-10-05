@@ -14,6 +14,7 @@ namespace PARCIAL1DDD
             Costo = costo;
         }
         public int Cantidad { get; set; }
+        public decimal PrecioVenta { get; set; }
         public decimal Costo { get; set; }
         public string RegistrarEntrada(int cantidad)
         {         
@@ -30,9 +31,11 @@ namespace PARCIAL1DDD
         {
             if (cantidad <= 0) return "No se puede vender un producto con cantidad menor o igual a cero";
 
+            PrecioVenta = cantidad * Precio;
             Cantidad -= cantidad;
 
-            return $"Venta exitosa, hay en existencia {Cantidad} productos";
+
+            return $"El precio de la venta es de ${PrecioVenta}, hay en existencia {Cantidad} productos";
         }
     }
 /*

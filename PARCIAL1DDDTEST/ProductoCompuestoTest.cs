@@ -48,7 +48,7 @@ namespace PARCIAL1DDDTEST
         Cuando	Va a ser vendido
         Entonces	El sistema presentará el mensaje. “Venta exitosa” AND restará la cantidad existente de los ingredientes en el inventario.
         */
-        /* 
+       
 
         [Test]
 
@@ -57,9 +57,9 @@ namespace PARCIAL1DDDTEST
 
              //Preparar
 
-             ProductoSimple ingrediente1 = new ProductoSimple("Pan de perro caliente", 1000, 3000, 1);
+             ProductoSimple ingrediente1 = new ProductoSimple("Pan de perro caliente", 1000, 3000, "Ingrediente");
              var registroEntrada1 = ingrediente1.RegistrarEntrada(3);
-             ProductoSimple ingrediente2 = new ProductoSimple("Salchicha de perro caliente", 1000, 4000, 1);
+             ProductoSimple ingrediente2 = new ProductoSimple("Salchicha de perro caliente", 1000, 4000, "Ingrediente");
              var registroEntrada2 = ingrediente2.RegistrarEntrada(4);
 
              List<ProductoSimple> ingredientes = new List<ProductoSimple>();
@@ -71,13 +71,12 @@ namespace PARCIAL1DDDTEST
              var productoCompuesto = new ProductoCompuesto(nombre: "Perro Caliente Sencillo", precio: 7000, ingredientes);
              //Acción
 
-             var registro3 = productoCompuesto.RegistrarSalida(1);
-             //Verificación
-             Assert.AreEqual("Venta exitosa", registro3);
-             Assert.AreEqual(ingrediente1.Cantidad, 2);
-             Assert.AreEqual(ingrediente2.Cantidad, 3);
+             var registroSalida = productoCompuesto.RegistrarSalida(1);
+            //Verificación
+            Assert.AreEqual(productoCompuesto.Costo, 2000);
+            Assert.AreEqual("Venta Exitosa, el costo del producto es de  $2000,00 y su precio es de $7000,00", registroSalida);
          }
-         */
+        
     }
 
 }
