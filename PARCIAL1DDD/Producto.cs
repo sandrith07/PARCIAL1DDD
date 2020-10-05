@@ -6,18 +6,20 @@ namespace PARCIAL1DDD
 {
     public abstract class  Producto
     {
-        public int Cantidad = 0;
-
-        protected Producto(string nombre, decimal costo, decimal precio)
+      
+        public int costo = 0;
+        protected Producto(string nombre, decimal precio)
         {
             Nombre = nombre;
-            Costo = costo;
             Precio = precio;
+           
         }
 
         public string Nombre { get; }
         public decimal Costo { get; set; }
         public decimal Precio { get; set; }
+
+        
 
         public virtual string RegistrarSalida(int cantidad)
       {

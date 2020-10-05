@@ -26,7 +26,7 @@ namespace PARCIAL1DDDTEST
         public void CantidadPRoductoARegistrarMayorACeroProductoSimpleTest()
         {
             //Preparar
-            var productoSimple = new ProductoSimple(nombre: "Salchicha", costo: 3000, precio: 7000);
+            var productoSimple = new ProductoSimple(nombre: "Salchicha", costo: 3000, precio: 7000, cantidad: 0);
             //Acción
             var resultado = productoSimple.RegistrarEntrada(0);
             //Verificación
@@ -47,13 +47,13 @@ namespace PARCIAL1DDDTEST
         public void RegistrarYAumentarCantidadExistenteProductoSimpleTest()
         {
             //Preparar
-            var productoSimple = new ProductoSimple(nombre: "Salchicha", costo: 3000, precio: 7000);
+            var productoSimple = new ProductoSimple(nombre: "Salchicha", costo: 3000, precio: 7000, cantidad: 3);
             //Acción
             var registro1 = productoSimple.RegistrarEntrada(5);
             var registro2 = productoSimple.RegistrarEntrada(3);
             //Verificación
             Assert.AreEqual("Registro exitoso", registro2);
-            Assert.AreEqual(productoSimple.Cantidad, 8);
+            Assert.AreEqual(productoSimple.Cantidad, 11);
         }
 
 
@@ -72,13 +72,13 @@ namespace PARCIAL1DDDTEST
         public void CantidadSalidaMayorACeroProductoSimpleTest()
         {
             //Preparar
-            var productoSimple = new ProductoSimple(nombre: "Gaseosa", costo: 4000, precio: 7000);
+            var productoSimple = new ProductoSimple(nombre: "Gaseosa", costo: 4000, precio: 7000, cantidad:5);
             //Acción
             var registro1 = productoSimple.RegistrarEntrada(5);
             var registro2 = productoSimple.RegistrarSalida(0);
             //Verificación
             Assert.AreEqual("No se puede vender un producto con cantidad menor o igual a cero", registro2);
-            Assert.AreEqual(productoSimple.Cantidad, 5);
+            Assert.AreEqual(productoSimple.Cantidad, 10);
         }
 
         /*
@@ -97,13 +97,13 @@ namespace PARCIAL1DDDTEST
         public void DisminuirCantidadExistenteProductoSimpleTest()
         {
             //Preparar
-            var productoSimple = new ProductoSimple(nombre: "Gaseosa", costo: 4000, precio: 7000);
+            var productoSimple = new ProductoSimple(nombre: "Gaseosa", costo: 4000, precio: 7000, cantidad: 3);
             //Acción
             var registro1 = productoSimple.RegistrarEntrada(3);
             var registro2 = productoSimple.RegistrarSalida(2);
             //Verificación
             Assert.AreEqual("Venta exitosa", registro2);
-            Assert.AreEqual(productoSimple.Cantidad, 1);
+            Assert.AreEqual(productoSimple.Cantidad, 4);
 
 
         }
