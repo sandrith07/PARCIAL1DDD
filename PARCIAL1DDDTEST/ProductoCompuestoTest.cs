@@ -64,9 +64,9 @@ namespace PARCIAL1DDDTEST
         Criterio de Aceptación:  3. En caso de un producto compuesto la cantidad de la salida se le disminuirá a la cantidad existente de cada uno de sus ingredientes.
         Dado	dos producto con nombre: Perro caliente sencillo, costo (calculado), precio 7000
         Cuando	Van a ser vendidos
-        Entonces	El sistema presentará el mensaje. “Venta exitosa” AND restará la cantidad existente de los ingredientes en el inventario.
+        Entonces	El sistema presentará el mensaje. “El precio de la venta es de $14000” AND restará la cantidad existente de los ingredientes en el inventario.
         */
-       
+
 
         [Test]
 
