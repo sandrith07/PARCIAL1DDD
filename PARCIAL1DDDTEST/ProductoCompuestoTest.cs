@@ -13,8 +13,8 @@ namespace PARCIAL1DDDTEST
         Escenario 3: Salida del producto mayor a 0
         H2: COMO USUARIO QUIERO REGISTRAR LA SALIDA PRODUCTOS
         Criterio de Aceptación:  1. La cantidad de la salida de debe ser mayor a 0
-        Dado	Un producto con nombre: Perro Caliente Sencillo, costo (calculado), cantidad 0, precio 7000
-        Cuando	Va a ser vendido
+        Dado	Dos producto con nombre: Perro Caliente Sencillo, costo (calculado), precio 7000
+        Cuando	Van a ser vendidos
         Entonces	El sistema presentará el mensaje. “No se puede vender un producto con cantidad menor o igual a cero” 
          */
 
