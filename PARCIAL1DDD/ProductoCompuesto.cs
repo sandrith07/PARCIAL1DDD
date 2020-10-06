@@ -8,41 +8,54 @@ namespace PARCIAL1DDD
 {
     public class ProductoCompuesto : Producto
     {
-        List<ProductoSimple> Ingredientes;
+        List<ProductoSimple> ingredientes = new List<ProductoSimple>();
 
-        public decimal Costo = 0;
+        public decimal Costo { get; set; }
         public decimal CostoTotalIngredientes = 0;
-        public ProductoCompuesto(string nombre, decimal precio, List<ProductoSimple> ingredientes) : base(nombre, precio)
+        public int CantidadRequeridaProducto { get; set; }
+    
+        public ProductoCompuesto(string nombre, decimal precio) : base(nombre, precio)
         {
-            Ingredientes = ingredientes;
+
+            
         }
 
-        public override string RegistrarSalida(int cantidad)
+        public override string RegistrarSalida(int cantidadRequeridaProducto)
         {
-            
-            if (cantidad <= 0) return "No se puede vender un producto con cantidad menor o igual a cero";
+            CantidadRequeridaProducto = cantidadRequeridaProducto;
+            if (cantidadRequeridaProducto <= 0) return "No se puede vender un producto con cantidad menor o igual a cero";
 
+            
             /*DisminuirCantidadIngredientesExistentes(Ingredientes);*/
 
-             CostoTotalIngredientes = CalcularCostoIngredientes(Ingredientes);
-             Costo = CostoTotalIngredientes * cantidad;
 
-            return $"El precio de la venta es de ${PrecioVenta}, el costo del producto es de  ${Costo:n2} y su precio es de ${Precio:n2}";
+            PrecioVenta = CantidadRequeridaProducto * Precio;
+   
 
-            
-
+            return $"El precio de la venta es de ${PrecioVenta}";
 
         }
 
-        public decimal CalcularCostoIngredientes(List<ProductoSimple> ingredientes)
-        {
-            decimal costoTotal=0;
-            foreach (ProductoSimple p in ingredientes)
-            {
-                costoTotal += p.Costo * p.Cantidad;
-            }
+        public void AñadirIngredientes(ProductoSimple ingredienteRequerido, int cantidadRequeridaIngrediente){
 
-            return costoTotal;
+            var CantidadRequeridaTotal = cantidadRequeridaIngrediente * CantidadRequeridaProducto;
+
+            ingredienteRequerido.RegistrarSalida(CantidadRequeridaTotal);
+
+            CalcularCostoIngredientes(ingredienteRequerido, cantidadRequeridaIngrediente);
+
+            ingredientes.Add(ingredienteRequerido);
+        }
+
+        /**/
+
+        public void CalcularCostoIngredientes(ProductoSimple ingrediente, int cantidadRequeridaIngrediente)
+        {
+          
+
+            var CostoIngredienteTotal = ingrediente.Costo * cantidadRequeridaIngrediente * CantidadRequeridaProducto;
+            Costo += CostoIngredienteTotal;
+            
            
         }
         

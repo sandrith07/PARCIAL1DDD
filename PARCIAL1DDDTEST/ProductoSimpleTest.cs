@@ -155,7 +155,34 @@ namespace PARCIAL1DDDTEST
 
         }
 
-  
+
+        /*
+       Escenario 6:  el producto saliente no es para venta directa
+       H2: COMO USUARIO QUIERO REGISTRAR LA SALIDA PRODUCTOS
+       Criterio de Aceptación:  2. En caso de un producto sencillo la cantidad de la salida se le disminuirá a la cantidad existente del producto.
+       Dado	Un producto con nombre: Salchicha, costo 4000, precio 7000, tipo de producto "Ingrediente" y con una existencia en el inventario de 5
+       Cuando	Va a ser vendido
+       Entonces	El sistema presentará el mensaje. “El producto no es para la venta directa”. 
+
+       */
+
+
+        [Test]
+
+        public void NoProductoVentaDirectaProductoSimpleTest()
+        {
+            //Preparar
+            var productoSimple = new ProductoSimple(nombre: "Salchicha", costo: 4000, precio: 7000, tipoProducto: "Ingrediente");
+            var registro1 = productoSimple.RegistrarEntrada(5);
+            //Acción
+            var salida = productoSimple.RegistrarSalida(2);
+            //Verificación
+            Assert.AreEqual("El producto no es para la venta directa", salida);
+
+
+        }
+
+
 
     }
 }
