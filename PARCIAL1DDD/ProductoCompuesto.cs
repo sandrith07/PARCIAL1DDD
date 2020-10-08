@@ -45,7 +45,15 @@ namespace PARCIAL1DDD
             if (cantidadRequeridaProducto <= 0) return "No se puede vender un producto con cantidad menor o igual a cero";
 
             PrecioVenta = CantidadRequeridaProducto * Precio;
+
+            var aux = cantidadRequeridaIngredienteTotal * cantidadRequeridaProducto;            
             
+            if (cantidadRequeridaProducto > 1)
+            {
+                IngredienteRequerido.RegistrarSalida(aux);
+            }
+            
+
             return $"El precio de la venta es de ${PrecioVenta}";
         }
 
