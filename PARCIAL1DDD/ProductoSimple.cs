@@ -37,7 +37,7 @@ namespace PARCIAL1DDD
         public override string RegistrarSalida(int cantidad)
         {
             if (cantidad <= 0) return "No se puede vender un producto con cantidad menor o igual a cero";
-            if (TipoProducto == "Ingrediente") return "El producto no es para la venta directa";
+            
             if (cantidad > StockProducto()) return "No hay suficientes productos para hacer la venta";
 
             PrecioVenta = cantidad * Precio;

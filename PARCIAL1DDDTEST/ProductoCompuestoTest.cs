@@ -43,11 +43,12 @@ namespace PARCIAL1DDDTEST
 
 
             var productoCompuesto = new ProductoCompuesto(nombre: "Perro Caliente Sencillo", precio: 7000);
-            //Acción
-            var registroSalida = productoCompuesto.RegistrarSalida(0);
             productoCompuesto.AñadirIngredientes(ingrediente1, 1);
             productoCompuesto.AñadirIngredientes(ingrediente2, 1);
             productoCompuesto.AñadirIngredientes(ingrediente3, 1);
+            //Acción
+            var registroSalida = productoCompuesto.SalidaProducto(0);
+
             //Verificación
            
             Assert.AreEqual("No se puede vender un producto con cantidad menor o igual a cero", registroSalida);
@@ -92,13 +93,17 @@ namespace PARCIAL1DDDTEST
 
 
             var productoCompuesto = new ProductoCompuesto(nombre: "Perro Caliente Sencillo", precio: 7000);
-            //Acción
-            var registroSalida = productoCompuesto.RegistrarSalida(2);
             productoCompuesto.AñadirIngredientes(ingrediente1, 1);
             productoCompuesto.AñadirIngredientes(ingrediente2, 1);
             productoCompuesto.AñadirIngredientes(ingrediente3, 1);
+
+            //Acción
+            var registroSalida = productoCompuesto.SalidaProducto(1);
+
             //Verificación
-            Assert.AreEqual("El precio de la venta es de $14000", registroSalida);
+            Assert.AreEqual(ingrediente1.Cantidad, 9);
+            Assert.AreEqual(ingrediente2.Cantidad, 9);
+            Assert.AreEqual(ingrediente3.Cantidad, 9);
             
            
          }
